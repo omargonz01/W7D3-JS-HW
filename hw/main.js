@@ -1,11 +1,17 @@
+// const pokeForm = 
+// querySelector('form')
+// pokeForm.addEventListener('submit', (event) => {
+//     event.preventDefault()
+//     console.log(pokeForm)
+// pokeDeetz(pokeName)
+// })
 // const pokeData = async (name) => {
     // const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
     // const data = await response.json()
     // console.log(data)
-// const pokemonName = document.getElementById("pokemonName").value
-// getPokemon(pokemonName);
+// const pokemonName = document.getElementById("Form")
+// getPokemon(Name);
 
-// .innerHTML - creates new code 
 
 const pokeForm = document.querySelector('form')
 pokeForm.addEventListener('submit', (event) => {
@@ -23,6 +29,7 @@ const pokeDeetz = async (name) => {
     const ability = data.abilities[0].ability.name
     const move1 = data.moves[0].move.name
     const baseExperience = data.base_experience
+    // .innerHTML - creates new code 
     pokeInfo.innerHTML = `
         <h2>${data.name}</h2>
         <img src="${data.sprites.front_default}">
@@ -31,8 +38,6 @@ const pokeDeetz = async (name) => {
         <p>Base experience: ${baseExperience}</p>
     `;
 }
-
-
 
 // dont need to .append since we are using the innerHTML...
 // i thought .append was needed since were creating new elements, but its creating new values on each 
